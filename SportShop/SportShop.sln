@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportShop.Domain", "SportShop.Domain\SportShop.Domain.csproj", "{0792B890-F4EE-47F1-AABA-3CC043E10574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportShop.UnitTests", "SportShop.UnitTests\SportShop.UnitTests.csproj", "{3A191B56-9DEC-46AF-B62F-8386132F9E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportShop.WebUI", "SportShop.WebUI\SportShop.WebUI.csproj", "{C35B16A2-BF8D-46C2-8033-187632A915D8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://czesuawek.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SportShop.Domain\\SportShop.Domain.csproj
+		SccProjectName1 = SportShop.Domain
+		SccLocalPath1 = SportShop.Domain
+		SccProjectUniqueName2 = SportShop.UnitTests\\SportShop.UnitTests.csproj
+		SccProjectName2 = SportShop.UnitTests
+		SccLocalPath2 = SportShop.UnitTests
+		SccProjectUniqueName3 = SportShop.WebUI\\SportShop.WebUI.csproj
+		SccProjectName3 = SportShop.WebUI
+		SccLocalPath3 = SportShop.WebUI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0792B890-F4EE-47F1-AABA-3CC043E10574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0792B890-F4EE-47F1-AABA-3CC043E10574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0792B890-F4EE-47F1-AABA-3CC043E10574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0792B890-F4EE-47F1-AABA-3CC043E10574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A191B56-9DEC-46AF-B62F-8386132F9E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A191B56-9DEC-46AF-B62F-8386132F9E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A191B56-9DEC-46AF-B62F-8386132F9E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A191B56-9DEC-46AF-B62F-8386132F9E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35B16A2-BF8D-46C2-8033-187632A915D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35B16A2-BF8D-46C2-8033-187632A915D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35B16A2-BF8D-46C2-8033-187632A915D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35B16A2-BF8D-46C2-8033-187632A915D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
