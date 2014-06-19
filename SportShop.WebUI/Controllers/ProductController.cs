@@ -14,11 +14,12 @@ namespace SportShop.WebUI.Controllers
             _producRepo = productRepo;
         }
 
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category,int page = 1)
         {
             var viewModel = new ProductsListViewModel
             {
                 Products = _producRepo.Products
+                    .Where(x=>x.Category == null || x.Category == category)
                     .OrderBy(x => x.ProductID)
                     .Skip((page - 1)*PageSize)
                     .Take(PageSize),
@@ -27,8 +28,9 @@ namespace SportShop.WebUI.Controllers
                 {
                     CurrentPage = page,
                     ItemstPerPage = PageSize,
-                    TotalItems = _producRepo.Products.Count()
-                }
+                    TotalItems = category == null ? _producRepo.Products.Count() : _producRepo.Products.Where(x=>x.Category == category).Count()
+                },
+                CurrentCategory = category
             };
 
             return View(viewModel);
