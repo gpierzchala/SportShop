@@ -4,6 +4,14 @@
     <div class="item">
         <h3>@Model.Name</h3>
         @Model.Description
+        
+        @using (Html.BeginForm("AddToCart", "Cart"))
+        {
+            @Html.HiddenFor(x=>x.ProductID)
+            @Html.Hidden("returnUrl",Request.Url.PathAndQuery)
+            <input type="submit" value="+ AddToCart"/>
+        }
+
         <h4>@Model.Price.ToString("C")</h4>
     </div>
 </div>
