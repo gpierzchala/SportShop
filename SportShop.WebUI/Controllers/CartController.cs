@@ -9,10 +9,11 @@ namespace SportShop.WebUI.Controllers
     public class CartController : Controller
     {
         private readonly IProductRepository _repo;
-
-        public CartController(IProductRepository repo)
+        private readonly IOrderProcessor _orderProcessor;
+        public CartController(IProductRepository repo,IOrderProcessor orderProcessor)
         {
             _repo = repo;
+            _orderProcessor = orderProcessor;
         }
         
         public ViewResult Index(Cart cart,string returnUrl)
@@ -45,5 +46,31 @@ namespace SportShop.WebUI.Controllers
             }
             return RedirectToAction("Index", new {returnUrl});
         }
+
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
+        }
+
+        [HttpPost]
+        public ViewResult Checkout(Cart cart, ShippingDetails shippingDetails)
+        {
+            if (cart.Lines.Count() == 0)
+            {
+                ModelState.AddModelError("","Cart is empty");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _orderProcessor.ProcessOrder(cart,shippingDetails);
+                cart.Clear();
+                return View("Completed");
+            }
+            else
+            {
+                return View(shippingDetails);
+            }
+        }
+
 }
 }
