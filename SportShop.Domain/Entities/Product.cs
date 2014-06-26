@@ -17,5 +17,9 @@ namespace SportShop.Domain.Entities
         public decimal Price { get; set; }
         [Required(ErrorMessage = "Product category is required")]
         public string Category { get; set; }
+        public byte[] ImageData { get; set; }
+        
+        [HiddenInput(DisplayValue = false)]
+        public string ImageMimeType { get; set; }
     }
 }

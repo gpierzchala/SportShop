@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using SportShop.Domain.Abstract;
+using SportShop.Domain.Entities;
 using SportShop.WebUI.Models;
 
 namespace SportShop.WebUI.Controllers
@@ -34,6 +35,20 @@ namespace SportShop.WebUI.Controllers
             };
 
             return View(viewModel);
+        }
+
+        public FileContentResult GetImage(int productId)
+        {
+            Product product = _producRepo.Products.FirstOrDefault(x => x.ProductID == productId);
+
+            if (product != null)
+            {
+                return File(product.ImageData, product.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

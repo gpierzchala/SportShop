@@ -5,6 +5,8 @@ using System.Web.Routing;
 using Ninject;
 using SportShop.Domain.Abstract;
 using SportShop.Domain.Concrete;
+using SportShop.WebUI.Infrastructure.Abstract;
+using SportShop.WebUI.Infrastructure.Concrete;
 
 namespace SportShop.WebUI.Infrastructure
 {
@@ -35,6 +37,8 @@ namespace SportShop.WebUI.Infrastructure
             _ninjectKernel.Bind<IOrderProcessor>()
                 .To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);
+
+            _ninjectKernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
 
         }
     }

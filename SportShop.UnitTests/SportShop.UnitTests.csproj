@@ -73,6 +73,8 @@
     <Compile Include="UnitTest.cs" />
     <Compile Include="SportShop.CartTests.cs" />
     <Compile Include="AdminTests.cs" />
+    <Compile Include="AdminSecurityTests.cs" />
+    <Compile Include="ImageTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

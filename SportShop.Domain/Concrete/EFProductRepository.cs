@@ -23,6 +23,8 @@ namespace SportShop.Domain.Concrete
                     productFromDB.Description = product.Description;
                     productFromDB.Category = product.Category;
                     productFromDB.Price = product.Price;
+                    productFromDB.ImageMimeType = product.ImageMimeType;
+                    productFromDB.ImageData = product.ImageData;
                 }
             }
             _context.SaveChanges();
